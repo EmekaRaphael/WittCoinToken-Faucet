@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "wittCoin_backend": {
+      "main": "src/wittCoin_backend/main.mo",
+      "type": "motoko"
+    },
+    "wittCoin_frontend": {
+      "dependencies": [
+        "wittCoin_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/wittCoin_frontend/src/index.html"
+      },
+      "source": [
+        "src/wittCoin_frontend/assets",
+        "dist/wittCoin_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
