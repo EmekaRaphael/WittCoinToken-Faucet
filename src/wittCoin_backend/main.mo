@@ -7,11 +7,11 @@ actor Token {
 
     
     var owner : Principal = Principal.fromText("iqhs6-7juce-ltvge-rnm7k-6zxps-uv5ok-pnlfa-p4lbq-duy5x-tspiu-sqe");
-    var totalSupply : Nat = 1000000000;
+    var totalSupply : Nat = 2000000000;
     var symbol : Text = "WITT";
 
     var balances = HashMap.HashMap<Principal, Nat>(1, Principal.equal, Principal.hash);
-
+    
     balances.put(owner, totalSupply);
 
 
@@ -23,5 +23,9 @@ actor Token {
         };
 
         return balance;
+    };
+
+    public query func getSymbol() : async Text {
+        return symbol;
     };
 };
