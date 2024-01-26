@@ -16,6 +16,10 @@
         "dist/wittCoin_frontend/"
       ],
       "type": "assets"
+    },
+    "token": {
+      "main": "src/wittCoin_backend/main.mo",
+      "type": "motoko"
     }
   },
   "defaults": {
