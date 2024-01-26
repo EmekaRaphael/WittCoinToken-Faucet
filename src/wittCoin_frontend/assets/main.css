@@ -1,91 +1,90 @@
 html {
-    background-image: url(/src/wittCoin_frontend/assets/WittCoinToken_solarSystem.jpg);
-    font-family: System, monospace;
-    font-size: 10pt;
-  }
+  font-family: System, monospace;
+  font-size: 15pt;
+}
   
-  body {
-    padding: 0;
-    margin: 0;
-  }
+body {
+  padding: 0;
+  margin: 0;
+}
+
+span:after {
+  content: " ";
+  display: inline-block;
+  width: 2%;
+}
   
-  span:after {
-    content: " ";
-    display: inline-block;
-    width: 2%;
-  }
+fieldset {
+  float: left;
+  padding-right: 18px;
+}
   
-  fieldset {
-    float: left;
-    padding-right: 18px;
-  }
+#logo {
+  font-family: System, monospace;
+  font-size: 20pt;
+}
   
-  #logo {
-    font-family: "Times";
-    font-size: 20pt;
-  }
+.window {
+  position: relative;
+  cursor: default;
+  margin: 2em auto;
+  width: 80%;
+  background: #3465a4;
+  color: white;
+  border: 6px double white;
+  padding: 1em;
+  box-shadow: 0 0 0 3px #3465a4, 1em 1em 3px 0 rgba(0, 0, 0, 0.5);
+  max-width: 640px;
+}
+
+.window.white {
+  background: silver;
+  color: black;
+  border-color: white;
+  box-shadow: 0 0 0 3px silver, 1em 1em 3px 0 rgba(0, 0, 0, 0.5);
+}
   
-  .window {
-    position: relative;
-    cursor: default;
-    margin: 2em auto;
-    width: 80%;
-    background: #3465a4;
-    color: white;
-    border: 6px double white;
-    padding: 1em;
-    box-shadow: 0 0 0 3px #3465a4, 1em 1em 3px 0 rgba(0, 0, 0, 0.5);
-    max-width: 640px;
-  }
+.window.half-width {
+  width: 50%;
+}
   
-  .window.white {
-    background: silver;
-    color: black;
-    border-color: white;
-    box-shadow: 0 0 0 3px silver, 1em 1em 3px 0 rgba(0, 0, 0, 0.5);
-  }
+.window h1 {
+  text-align: center;
+}
   
-  .window.half-width {
-    width: 50%;
-  }
+.window.blue p {
+  color: white;
+  text-shadow: 0 0 2px white;
+}
   
-  .window h1 {
-    text-align: center;
-  }
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
   
-  .window.blue p {
-    color: white;
-    text-shadow: 0 0 2px white;
-  }
+button,
+.button,
+.button:link {
+  display: inline-block;
+  font-weight: bolder;
+  color: white;
+  font-family: inherit;
+  font-size: inherit;
+  background: green;
+  padding: 0 1em;
+  box-shadow: 0.5em 0.5em 3px rgba(0, 0, 0, 0.5);
+  position: relative;
+  transition: 0.2s all ease-in;
+  border: 1px outset green;
+}
   
-  button {
-    margin: 0;
-    padding: 0;
-    border: none;
-    cursor: pointer;
-  }
-  
-  button,
-  .button,
-  .button:link {
-    display: inline-block;
-    font-weight: bolder;
-    color: white;
-    font-family: inherit;
-    font-size: inherit;
-    background: green;
-    padding: 0 1em;
-    box-shadow: 0.5em 0.5em 3px rgba(0, 0, 0, 0.5);
-    position: relative;
-    transition: 0.2s all ease-in;
-    border: 1px outset green;
-  }
-  
-  button.full-width,
-  .button.full-width {
-    display: block;
-    text-align: center;
-  }
+button.full-width,
+.button.full-width {
+  display: block;
+  text-align: center;
+}
   
   button:before,
   .button:before {
@@ -179,4 +178,3 @@ html {
     display: table;
     margin: auto;
   }
-  

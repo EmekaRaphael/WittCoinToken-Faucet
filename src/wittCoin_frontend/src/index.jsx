@@ -1,9 +1,9 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
-import App from "./components/App";
+import BackgroundImageComponent from './components/BackgroundImageComponent';
 
 const init = async () => { 
-  ReactDOM.render(<App />, document.getElementById("root"));
+  ReactDOM.render(<BackgroundImageComponent />, document.getElementById("root"));
 }
 
 init();
