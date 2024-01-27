@@ -1,10 +1,10 @@
 import Principal "mo:base/Principal";
 import Nat "mo:base/Nat";
 import HashMap "mo:base/HashMap";
+import Debug "mo:base/Debug";
 
 
 actor Token {
-
     
     var owner : Principal = Principal.fromText("iqhs6-7juce-ltvge-rnm7k-6zxps-uv5ok-pnlfa-p4lbq-duy5x-tspiu-sqe");
     var totalSupply : Nat = 2000000000;
@@ -13,7 +13,6 @@ actor Token {
     var balances = HashMap.HashMap<Principal, Nat>(1, Principal.equal, Principal.hash);
     
     balances.put(owner, totalSupply);
-
 
     public query func balanceOf(who: Principal) : async Nat {
 
@@ -28,4 +27,32 @@ actor Token {
     public query func getSymbol() : async Text {
         return symbol;
     };
+
+    public shared(msg) func payOut() : async Text {
+        //  Debug.print(debug_show(msg.caller));
+        if (balances.get(msg.caller) == null) {
+            let amount = 10000;
+            let result = await transfer(msg.caller, amount);
+             return result;
+        } else {
+            return "Already claimed WITT";
+        };
+    };
+
+    public shared(msg) func transfer(to: Principal, amount: Nat) : async Text {
+        let fromBalance = await balanceOf(msg.caller);
+        if (fromBalance > amount) {
+            let newFromBalance : Nat = fromBalance - amount;
+            balances.put(msg.caller, newFromBalance);
+
+            let toBalance = await balanceOf(to);
+            let newToBalance = toBalance + amount;
+            balances.put(to, newToBalance);
+
+            return "Token transferred successfully";
+        } else {
+            return "Insufficient Funds";
+        };
+    };
+
 };

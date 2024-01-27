@@ -141,8 +141,8 @@ button.full-width,
   
   input,
   textarea {
-    background: blue;
-    color: aqua;
+    background: #fff;
+    color: #504e4e;
     width: 100%;
     max-width: 100%;
     font-size: 12pt;
@@ -172,6 +172,10 @@ button.full-width,
   .trade-buttons {
     text-align: center;
     margin-top: 20px;
+  }
+
+  .feedback {
+    text-align: center;
   }
   
   div .transfer {

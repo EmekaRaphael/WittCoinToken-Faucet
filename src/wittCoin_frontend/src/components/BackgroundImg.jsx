@@ -1,7 +1,7 @@
 import React from 'react';
 import App from './App';
 
-const BackgroundImageComponent = () => {
+const BackgroundImg = () => {
   const backgroundImageUrl = 'url("bg_img.png")'; // Replace with the actual path to your image
 
   const containerStyle = {
@@ -26,4 +26,4 @@ const BackgroundImageComponent = () => {
 };
 
 
-export default BackgroundImageComponent;
+export default BackgroundImg;
