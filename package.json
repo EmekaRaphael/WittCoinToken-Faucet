@@ -18,7 +18,9 @@
   },
   "dependencies": {
     "@dfinity/agent": "^0.21.2",
+    "@dfinity/auth-client": "^0.21.4",
     "@dfinity/candid": "^0.21.2",
+    "@dfinity/identity": "",
     "@dfinity/principal": "^0.21.2",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
@@ -26,7 +28,7 @@
     "@mui/material": "^5.15.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "^5.0.2"
+    "react-scripts": ""
   },
   "devDependencies": {
     "assert": "2.0.0",
@@ -46,7 +48,9 @@
     "webpack-dev-server": "^4.8.1"
   },
   "babel": {
-    "presets": ["@babel/preset-react"]
+    "presets": [
+      "@babel/preset-react"
+    ]
   },
   "engines": {
     "node": "^12 || ^14 || ^16 || >=17",

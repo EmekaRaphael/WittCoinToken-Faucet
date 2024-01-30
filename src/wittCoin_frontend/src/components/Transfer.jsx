@@ -59,6 +59,7 @@ function Transfer() {
       </div>
     </div>
   );
+  
 }
 
 export default Transfer;
