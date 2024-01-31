@@ -21,6 +21,9 @@ const init = async () => {
 }
 
 async function handleAuthenticated(authClient) {
+  const identity = await authClient.getIdentity();
+  const userPrincipal = identity._principal.toString();
+  console.log(userPrincipal);
   ReactDOM.render(<BackgroundImg />, document.getElementById("root"));
 }
 
