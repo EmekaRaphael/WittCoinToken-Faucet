@@ -3,6 +3,7 @@ import Header from "./Header";
 import Faucet from "./Faucet";
 import Balance from "./Balance";
 import Transfer from "./Transfer";
+import Footer from "./Footer.jsx";
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       <Faucet />
       <Balance />
       <Transfer />
+      <Footer />
     </div>
   );
 }

@@ -8,13 +8,16 @@ function Balance() {
   const [balanceResult, setBalance] = useState("");
   const [cryptoSymbol, setSymbol] = useState("");
   const [isHidden, setHidden] = useState(true);
+  const [isDisabled, setDisable] = useState(false);
   
   async function handleClick() {
+    setDisable(true);
     const principal = Principal.fromText(inputValue);
     const balance = await token.balanceOf(principal);
     setBalance(balance.toLocaleString());
     setSymbol(await token.getSymbol());
     setHidden(false);
+    setDisable(false);
   }
 
 
@@ -34,6 +37,7 @@ function Balance() {
         <button
           id="btn-request-balance"
           onClick={handleClick}
+          disabled={isDisabled}
         >
           Check Balance
         </button>
